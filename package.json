@@ -1,0 +1,15 @@
+{
+  "name": "tokens",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Troublor/tokens.git",
+  "author": "Aaron <troublor@live.com>",
+  "license": "MIT",
+  "scripts": {
+    "dai:migrate": "cd DAI && truffle migrate --network development --reset",
+    "weth:migrate": "cd WETH && truffle migrate --network development --reset"
+  },
+  "dependencies": {
+    "truffle": "^5.1.39"
+  }
+}
