@@ -24,6 +24,10 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+const PrivateKeyProvider = require("truffle-privatekey-provider");
+
+const privateKey = "280b1c59471b00a03919c48322964401245f3b84ff497f3553eb93c5451fd480";
+
 module.exports = {
     /**
      * Networks define how you connect to your ethereum client and let you set the
@@ -43,8 +47,10 @@ module.exports = {
         // options below to some value.
         //
         development: {
-            host: "127.0.0.1",     // Localhost (default: none)
-            port: 8545,            // Standard Ethereum port (default: none)
+            provider: () => new PrivateKeyProvider(privateKey, "http://localhost:8545"),
+            // host: "127.0.0.1",     // Localhost (default: none)
+            // port: 8545,            // Standard Ethereum port (default: none)
+
             network_id: "*",       // Any network (default: none)
         },
 

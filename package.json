@@ -10,6 +10,8 @@
     "weth:migrate": "cd WETH && truffle migrate --network development --reset"
   },
   "dependencies": {
-    "truffle": "^5.1.39"
+    "truffle": "^5.1.39",
+    "truffle-keystore-provider": "^1.0.6",
+    "truffle-privatekey-provider": "^1.5.0"
   }
 }
